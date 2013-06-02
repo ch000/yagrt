@@ -37,15 +37,17 @@ body{
    border: 0;
 }
 
-.claro .dijitTreeExpandoOpened {
-  background: url("yagrt-images/google-sprite.png") no-repeat scroll 0 0 transparent;
-  background-position: -23px -5px;
+.dijitTreeExpandoOpened {
+  background: url("yagrt-images/google-sprite.png") no-repeat scroll -23px -5px transparent !important;
+}
+.dijitTreeExpandoClosed{
+  background: url("yagrt-images/google-sprite.png") no-repeat scroll -2px -5px transparent !important;
 }
 
-.claro .dijitFolderOpened{
-    background: url("yagrt-images/google-sprite.png") no-repeat scroll 0 0 transparent;
-    background-position: -44px -5px;
-    opacity: 0.4;
+.dijitFolderOpened, .dijitFolderClosed{
+  background: url("yagrt-images/google-sprite.png") no-repeat scroll 0 0 transparent;
+  background-position: -44px -5px;
+  opacity: 0.4;
 }
 
 #feedTree{
