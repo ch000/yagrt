@@ -85,9 +85,10 @@ body{
 }
 
 .dijitTreeRowSelected{
-    padding: 4px 0 2px !important;
-    .dijitTreeLabel{
-      margin-left: 1px;
+    padding: 4px 25px 2px 0 !important;
+    .dijitTreeContent{
+      position:relative;
+      left:-3px;
     }
     background-color: #FFFFFF !important;
     background-image: none !important;
@@ -97,8 +98,9 @@ body{
 }
 
 .dijitTreeRowHover.dijitTreeRowSelected{
-    .dijitTreeLabel{
-      margin-left: 1px;
+    .dijitTreeContent{
+      position:relative;
+      left:-3px;
     }
     background-color: #E8E8E8 !important;
     color: #D14836 !important;
@@ -109,7 +111,7 @@ body{
   background-color: #E8E8E8 !important;
   background-image: none !important;
   border: 0 !important;
-  padding: 4px 0 2px !important;
+  padding: 4px 25px 2px 0 !important;
 }
 
 #feedTree{
@@ -278,6 +280,23 @@ body{
       text-decoration:none;
     }
   }
+}
+
+//*************************************//
+//***  stuff
+//*************************************//
+#notify{
+  position:absolute;
+  top: 10px;
+  left: 730px;
+  z-index: 101;
+  opacity: 0.4;
+}
+
+#feeds-holder_splitter{
+  top: 50px !important;
+  border-top: 1px solid #EBEBEB;
+  width: 16px;
 }
 
 //*************************************//
