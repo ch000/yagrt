@@ -190,6 +190,11 @@ body{
 
   span.r{
     float: left;
+    #selected_prompt {
+      float: right;
+      margin-left: 10px;
+      color: #666666;
+    }
   } 
 
   &>a, .dijitSelect{
