@@ -215,6 +215,59 @@ body{
 //*************************************//
 
 #headlines-frame{
+  .hl{
+    
+    border-bottom: 1px solid #CCCCCC;
+    width: 100%;
+    .hlLeft{
+      width: 70px;
+      position: relative;
+      top: -11px;
+      &>div{
+        margin-top: -8px;
+      }
+      &>div, &>img{
+        margin-right: 5px;
+      }
+    }
+    .hlTitle{
+      width: 90%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space:nowrap;
+
+      a:link{
+        text-decoration:none;
+        line-height: 37px;
+        color: #000000;
+        font-size: 100%;
+        font-weight: bold;
+
+        span{ 
+          color: #777777;
+          font-size: 90%;
+          font-weight: normal;
+        }
+      }
+
+    }
+    .hlUpdated, .hlRight{
+      float: right;
+      padding-top: 11px;
+    }
+
+    &>div, &>span{
+      //float: left;
+      display: inline-block;
+
+    }
+    &>:after{
+      //clear: both;
+    }
+  }
+}
+
+#headlines-frame{
   top: 40px !important;
   padding-top: 20px;
   //########## Border
