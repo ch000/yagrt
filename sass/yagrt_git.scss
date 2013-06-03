@@ -145,10 +145,16 @@ body{
   background-color: #FFFFFF;
   border-bottom: 1px solid #EBEBEB;
   height: 51px;
-  padding-top: 7px;
+  padding-top: 9px;
 
   .dijitSelect, .dijitComboButton{
     @extend .g-button;
+  }
+  .dijitSelect{
+    padding-top: 1px !important;
+  }
+  .dijitButtonNode{
+    padding-top: 0px !important;
   }
 }
 
@@ -159,9 +165,9 @@ body{
 .actionChooser{
   @extend .g-button;
   position: absolute;
-  top:7px;
+  top:9px;
   right: 0px;
-  margin-right: 8px !important;
+  margin-right: 5px !important;
 }
 
 //*************************************//
@@ -186,10 +192,11 @@ body{
   height: 40px;
   border-bottom: 1px solid #EBEBEB;
   text-align: right;
-  padding: 5px 5px 5px 40px;
+  padding: 5px 7px 5px 40px;
 
   span.r{
     float: left;
+    margin-top: 5px;
     #selected_prompt {
       float: right;
       margin-left: 10px;
@@ -208,7 +215,7 @@ body{
 //*************************************//
 
 #headlines-frame{
-  top: 50px !important;
+  top: 40px !important;
   //########## Border
   .cdm{
     position: relative;
@@ -336,6 +343,12 @@ body{
   .dijitButtonContents{
     border-right: 0px;
   } 
+
+  .dijitArrowButton{
+    border: 0;
+    background-color: transparent;
+    background-image: none;
+  }
 
   .dijitSelectLabel, .dijitButtonText{
     padding: 0 6px 0 6px;
