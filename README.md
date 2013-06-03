@@ -1,5 +1,6 @@
-yagrt
+yagrt 
 =====
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=ch000&url=https://github.com/ch000/yagrt&title=yagrt&language=&tags=github&category=software)
 
 yet another google reader theme for tiny tiny rss
 
