@@ -216,6 +216,7 @@ body{
 
 #headlines-frame{
   top: 40px !important;
+  padding-top: 20px;
   //########## Border
   .cdm{
     position: relative;
@@ -289,8 +290,20 @@ body{
     background-color: #FAFAFA;
     border-top: 1px solid #EBEBEB;
     border-right: 1px solid #EBEBEB;
-    padding: 5px 5px 5px 80px;
+    padding: 5px 5px 5px 70px;
     color: #444444;
+
+    &>div:last-child{
+      float: left !important; 
+      >*{
+        margin-right: 5px;
+      }
+    }
+
+    .markasread{
+      min-width: 15px;
+    }
+  
     a:link{
       color: #444444;
       text-decoration:none;
