@@ -1,5 +1,5 @@
 @import "compass";
-@import "compass/reset";
+//@import "compass/reset";
 
 //*************************************//
 //***  general
@@ -297,8 +297,8 @@ body{
 }
 
 #feeds-holder_splitter{
-  //top: 50px !important;
-  //border-top: 1px solid #EBEBEB;
+  top: 50px !important;
+  border-top: 1px solid #EBEBEB;
 }
 
 //*************************************//
