@@ -26,6 +26,9 @@ body{
 //#### Feedlist
 
 //#### Toolbar
+#toolbar{
+  top: 0 !important;
+}
 #main-toolbar{
   padding: 0;
   background-color: #FFFFFF;
@@ -64,15 +67,63 @@ body{
   background: url("yagrt-images/icon-sprite.png") no-repeat scroll -2px -5px transparent !important;
 }
 
+.dijitTreeRow{
+  width: 100% !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 25px !important;
+}
+
+.dijitTreeLabel{
+  font-weight: bold;
+  font-size: 13px;
+  //line-height: 21px;
+}
+
+.dijitTreeNodeHover{
+
+}
+
+.dijitTreeRowSelected{
+    padding: 4px 0 2px !important;
+    .dijitTreeLabel{
+      margin-left: 1px;
+    }
+    background-color: #FFFFFF !important;
+    background-image: none !important;
+    border: 0 !important;
+    color: #D14836 !important;
+    border-left: 3px solid #DD4B39 !important;
+}
+
+.dijitTreeRowHover.dijitTreeRowSelected{
+    .dijitTreeLabel{
+      margin-left: 1px;
+    }
+    background-color: #E8E8E8 !important;
+    color: #D14836 !important;
+    border-left: 3px solid #DD4B39 !important;
+}
+
+.dijitTreeRowHover{
+  background-color: #E8E8E8 !important;
+  background-image: none !important;
+  border: 0 !important;
+  padding: 4px 0 2px !important;
+}
+
 #feedTree{
   border-top: 1px solid #EBEBEB;
   padding-top: 15px;
 
 
   .counterNode{
+    opacity: 0.4;
     float: right;
     font-size: 85%;
     color: #666666;
+    position: relative;
+    right: -15px;
 
     &:before{
       content: "("
@@ -107,6 +158,7 @@ body{
   position: absolute;
   top:7px;
   right: 0px;
+  margin-right: 8px !important;
 }
 
 //*************************************//
@@ -125,6 +177,7 @@ body{
 }
 
 #headlines-toolbar{
+  width: 100% !important;
   height: 40px;
   border-bottom: 1px solid #EBEBEB;
   text-align: right;
@@ -205,9 +258,12 @@ body{
     position: absolute;
     bottom: 5px;
     margin-left: -10px;
-    img{
+    &>img{
       position: relative;
       top: 4px;
+    }
+    &>div, &>img{
+      margin-right: 3px;
     }
 
   }
