@@ -169,6 +169,18 @@ body{
   right: 0px;
   margin-right: 5px !important;
 }
+.dijitButtonContentsHover{
+
+}
+.dijitComboButtonHover{
+
+}
+
+.dijitComboButtonHover .dijitButtonNode, .dijitComboButtonHover .dijitDownArrowButton{
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+}
 
 //*************************************//
 //***  Feedinfo
@@ -254,6 +266,7 @@ body{
     .hlUpdated, .hlRight{
       float: right;
       padding-top: 11px;
+      color: #666666;
     }
 
     &>div, &>span{
