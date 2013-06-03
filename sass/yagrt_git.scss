@@ -28,6 +28,7 @@ body{
 //#### Toolbar
 #toolbar{
   top: 0 !important;
+  left: 0 !important;
 }
 #main-toolbar{
   padding: 0;
@@ -294,9 +295,8 @@ body{
 }
 
 #feeds-holder_splitter{
-  top: 50px !important;
-  border-top: 1px solid #EBEBEB;
-  width: 16px;
+  //top: 50px !important;
+  //border-top: 1px solid #EBEBEB;
 }
 
 //*************************************//
