@@ -1,0 +1,267 @@
+@import "compass";
+@import "compass/reset";
+
+//*************************************//
+//***  general
+//*************************************//
+
+body{
+  padding-top:7px !important;
+  font-family: arial,sans-serif;
+  font-size: 90%;
+}
+
+*{
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.claro .dijitSplitContainer-child, .claro .dijitBorderContainer-child {
+    border: 0;
+}
+
+.claro .dijitContentPane {
+    padding: 0;
+}
+//#### Feedlist
+
+//#### Toolbar
+#main-toolbar{
+  padding: 0;
+  background-color: #FFFFFF;
+  border: 0;
+}
+//#### Feedinfo
+
+//#### Feed
+
+//*************************************//
+//***  feedlist
+//*************************************//
+
+#feeds-holder{
+  border-right: 0;
+  &:before{
+    content: "Tiny Tiny RSS";
+    color: #DD4B39;
+    font-size: 20px;
+    padding: 6px 0 6px 45px;
+    display: block;
+    height: 38px;
+    line-height: 31px;
+  }
+}
+
+.dijitFolderOpened, .dijitFolderClosed{
+  background: url("yagrt-images/icon-sprite.png") no-repeat scroll -44px -5px transparent;
+  opacity: 0.4;
+}
+
+.dijitTreeExpandoOpened {
+  background: url("yagrt-images/icon-sprite.png") no-repeat scroll -23px -5px transparent !important;
+}
+.dijitTreeExpandoClosed{
+  background: url("yagrt-images/icon-sprite.png") no-repeat scroll -2px -5px transparent !important;
+}
+
+#feedTree{
+  border-top: 1px solid #EBEBEB;
+  padding-top: 15px;
+
+
+  .counterNode{
+    float: right;
+    font-size: 85%;
+    color: #666666;
+
+    &:before{
+      content: "("
+    }
+    &:after{
+      content: ")"
+    }
+  }
+}
+
+//*************************************//
+//***  Toolbar
+//*************************************//
+
+#main_toolbar_form{
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #EBEBEB;
+  height: 51px;
+  padding-top: 7px;
+
+  .dijitSelect, .dijitComboButton{
+    @extend .g-button;
+  }
+}
+
+#collapse_feeds_btn_label{
+  opacity: 0.25;
+}
+
+.actionChooser{
+  @extend .g-button;
+  position: absolute;
+  top:7px;
+  right: 0px;
+}
+
+//*************************************//
+//***  Feedinfo
+//*************************************//
+
+#headlines-wrap-inner{
+  top:51px !important;
+}
+
+#feed_title, #feed_title a:link{
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #444444;
+}
+
+#headlines-toolbar{
+  height: 40px;
+  border-bottom: 1px solid #EBEBEB;
+  text-align: right;
+  padding: 5px 5px 5px 40px;
+
+  span.r{
+    float: left;
+  } 
+
+  &>a, .dijitSelect{
+    @extend .g-button;
+    margin-right: 3px !important;
+  }
+}
+
+//*************************************//
+//***  Feed
+//*************************************//
+
+#headlines-frame{
+  top: 50px !important;
+  //########## Border
+  .cdm{
+    position: relative;
+    margin: 5px 10px 10px 39px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DDDDDD;
+    box-shadow: 0 0 4px #E3E5EB;
+    &:hover{
+      border-left-color: rgb(77, 144, 240);
+    }
+    hr{
+      display: none;
+    }
+  }
+  //########## Header
+  .cdmHeader{
+    padding: 20px;
+    padding-bottom: 0;
+    overflow: hidden;
+    .titleWrap{
+      width: auto;
+      float: left;
+    }
+    a.title:link{
+      color: #1155CC;
+      font-size: 140%;
+      text-decoration:none;
+    }
+    .author{
+      color: #666666;
+      font-size: 13px;
+      display: block;
+      margin-top: 3px;
+    }
+    .updated{
+      float: right;
+      color: #666666;
+      width: auto;
+      display: block;
+    }
+
+    &>div, &>span{
+      float: right;
+      margin-left: 10px;
+    }
+  }
+
+  //########## Conent
+  .cdmContentInner{
+    margin: 0;
+    padding: 20px;
+    padding-top: 0.5em;
+    max-width: 650px;
+  }
+  //########## Footer
+  .cdmHeader>div:first-child{
+    position: absolute;
+    bottom: 5px;
+    margin-left: -10px;
+    img{
+      position: relative;
+      top: 4px;
+    }
+
+  }
+  .cdmFooter{
+    background-color: #FAFAFA;
+    border-top: 1px solid #EBEBEB;
+    border-right: 1px solid #EBEBEB;
+    padding: 5px 5px 5px 80px;
+    color: #444444;
+    a:link{
+      color: #444444;
+      text-decoration:none;
+    }
+  }
+}
+
+//*************************************//
+//***  components
+//*************************************//
+
+.g-button {
+  text-decoration: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  color: #444444;
+  background-color: #F5F5F5;
+  background-image: -moz-linear-gradient(center top , #F5F5F5, #F1F1F1);
+  border: 1px solid #DCDCDC;
+  border-radius: 2px 2px 2px 2px;
+  cursor: default;
+  font-size: 11px;
+  font-weight: bold;
+  height: 29px;
+  line-height: 28px;
+  margin-right: 16px;
+  min-width: 54px;
+  outline: 0 none;
+  padding: 0 8px;
+  text-align: center;
+  white-space: nowrap;
+
+  .dijitButtonContents{
+    border-right: 0px;
+  } 
+
+  .dijitSelectLabel, .dijitButtonText{
+    padding: 0 6px 0 6px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    color: #444444;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 25px;
+  }
+}
