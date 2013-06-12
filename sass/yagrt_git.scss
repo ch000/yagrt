@@ -52,6 +52,8 @@ body{
     display: block;
     height: 38px;
     line-height: 31px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
 
@@ -341,11 +343,15 @@ body{
       width: auto;
       float: left;
     }
-    a.title:link{
-      color: #1155CC;
+    a.title{
       font-size: 140%;
       text-decoration:none;
+      &:link {color:#1155CC;}      /* unvisited link */
+      &:visited {color:#1155CC;}  /* visited link */
+      &:hover {color:#1155CC;}  /* mouse over link */
+      a:active {color:#1155CC;}  /* selected link */
     }
+
     .author{
       color: #666666;
       font-size: 13px;
