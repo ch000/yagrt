@@ -42,7 +42,6 @@ body{
 //*************************************//
 //***  feedlist
 //*************************************//
-
 #feeds-holder{
   border-right: 0;
   &:before{
@@ -54,6 +53,11 @@ body{
     height: 38px;
     line-height: 31px;
   }
+}
+
+.feedIcon, .tinyFeedIcon{
+  width: 16px;
+  height: 16px;
 }
 
 .dijitFolderOpened, .dijitFolderClosed{
@@ -192,6 +196,8 @@ body{
 
 #headlines-wrap-inner{
   top:51px !important;
+  overflow-y: auto;
+  padding-right: 10px;
 }
 
 #feed_title, #feed_title a:link{
@@ -229,28 +235,60 @@ body{
 //*************************************//
 //***  Feed
 //*************************************//
-
+//#### Listview
 #headlines-frame{
+  display: table;
+  width: 100%;
+  height: auto !important;
+  table-layout: auto;
+  border-collapse: collapse;
+
   .hl{
-    
+    display: table-row;
     border-bottom: 1px solid #CCCCCC;
-    width: 100%;
-    .hlLeft{
-      width: 70px;
-      position: relative;
-      top: -11px;
-      &>div{
-        margin-top: -8px;
-      }
-      &>div, &>img{
-        margin-right: 5px;
-      }
+
+    &> div, &> span { 
+      display: table-cell;  
+      width: 1%; 
+      white-space: nowrap;
+      vertical-align: middle;
+      padding: 0 5px;
     }
+
+    .hlLeft .dijitCheckBoxIcon {
+      position: relative;
+      top: -4px;
+    }
+
+    .hlUpdated, .hlRight{
+      color: #666666;
+    }
+    .hlRight{
+      padding-right: 20px;
+    }
+
+    .hlFeed {
+        &:link {color:#555555;}      /* unvisited link */
+        &:visited {color:#555555;}  /* visited link */
+        &:hover {color:#555555;}  /* mouse over link */
+        &:active {color:#555555;}  /* selected link */
+        text-decoration: none;
+    }
+
+    .hlContent{
+      position:absolute;
+    }
+
+    .hlUpdated{
+ 
+    }
+    
     .hlTitle{
-      width: 90%;
+      width: 100%;
       overflow: hidden;
-      text-overflow: ellipsis;
-      white-space:nowrap;
+      position:relative;
+      display: inline-block;
+      height: 40px;
 
       a:link{
         text-decoration:none;
@@ -267,30 +305,20 @@ body{
       }
 
     }
-    .hlUpdated, .hlRight{
-      float: right;
-      padding-top: 11px;
-      color: #666666;
-    }
-
-    &>div, &>span{
-      //float: left;
-      display: inline-block;
-
-    }
-    &>:after{
-      //clear: both;
-    }
   }
 }
-
+#content-insert{
+  @extend .cdm;
+}
+//#### Feedview
 #headlines-frame{
   top: 40px !important;
-  padding-top: 20px;
+  padding-top: 0px;
+  
   //########## Border
   .cdm{
     position: relative;
-    margin: 5px 10px 10px 39px;
+    margin: 5px 10px 40px 39px;
     background: none repeat scroll 0 0 #FFFFFF;
     border: 1px solid #DDDDDD;
     box-shadow: 0 0 4px #E3E5EB;
@@ -300,6 +328,9 @@ body{
     hr{
       display: none;
     }
+  }
+  .cdm:first-child{
+    margin-top: 25px;
   }
   //########## Header
   .cdmHeader{
@@ -334,7 +365,7 @@ body{
     }
   }
 
-  //########## Conent
+  //########## Content
   .cdmContentInner{
     margin: 0;
     padding: 20px;
@@ -380,6 +411,31 @@ body{
     }
   }
 }
+//#### Feedview expandable
+.cdm.expandable{
+  .cdmHeader {
+    padding: 5px 20px;
+    &> div:first-child {
+      display: none;
+    }
+  }
+  .title:link{
+      text-decoration:none;
+      line-height: 37px;
+      color: #000000;
+      font-size: 100%;
+      font-weight: bold;
+  }
+  margin: 5px 10px 5px 39px;
+  .cdmExcerpt{
+    display: none;
+  }
+
+}
+.cdm.expandable.active{
+
+}
+
 
 //*************************************//
 //***  stuff
@@ -400,6 +456,8 @@ body{
 //*************************************//
 //***  components
 //*************************************//
+
+
 
 .g-button {
   text-decoration: none;
